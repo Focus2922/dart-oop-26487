@@ -1,3 +1,5 @@
+
+
 # Dart OOP Assignment: Kigali Bus Card
 
 Name: Tuyishimire Jean Claude  
@@ -47,3 +49,10 @@ It will print `1` and then `5`.
 - For `Bag a = Bag();`: `_items` starts at `0`. `a.add()` makes `_items` equal `1`. `a.items = -5;` is ignored because the setter only accepts `value >= 0`. `print(a.items)` prints `1`.
 - For `BigBag b = BigBag();`: `BigBag.add()` calls `super.add()` twice, adding `2` items each time. Calling `b.add()` twice adds `2 + 2 = 4`. Then `b.items = b.items + 1;` adds `1` (since `5 >= 0`), making it `5`. `print(b.items)` prints `5`.
 
+
+Real output:
+1
+5
+
+Was I right?
+Yes, my prediction matched the real output (`1` and `5`).
