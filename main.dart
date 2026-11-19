@@ -33,3 +33,32 @@ print('Owner: $_owner | Balance: $_balance RWF');
 // fare is more than _balance -> print 'Card declined'
 // otherwise -> subtract fare from _balance, print 'Paid <fare> RWF'
 }
+
+
+
+class StudentCard extends BusCard {
+  int _discount = 0;
+
+  // Constructor (done for you)
+  // ": super(owner, balance)" builds the parent BusCard first
+  StudentCard(String owner, int balance, int discount) : super(owner, balance) {
+    _discount = discount;
+  }
+
+  // EXAMPLE: override showInfo (done for you)
+  @override
+  void showInfo() {
+    super.showInfo(); // run the parent's showInfo first
+    print('Student card: $_discount% off');
+  }
+
+  // TODO 4: override pay(int fare)
+  @override
+  void pay(int fare) {
+    int off = fare * _discount ~/ 100;
+    print('Student discount: $off RWF');
+    super.pay(fare - off);
+  }
+}
+
+
