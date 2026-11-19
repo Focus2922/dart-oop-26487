@@ -27,3 +27,17 @@ Paid 239 RWF
 Owner: Tuyishimire Jean Claude | Balance: 1631 RWF
 Student card: 17% off
 
+## Part 4: Bug table
+
+## Part 4: Bug table
+
+| Bug | The line | Why it is wrong (your words) | Your fix |
+| :--- | :--- | :--- | :--- |
+| **1** | `String _brand;` and `int _battery;` | Non-nullable fields in `Phone` are not initialized before the constructor runs. | Give them initial values: `String _brand = '';` and `int _battery = 0;`. |
+| **2** | `SmartPhone(String brand, int battery, String system) {` | `Phone` has no default 0-argument constructor, so `SmartPhone` must pass `brand` and `battery` to `super`. | Add `: super(brand, battery)` to the `SmartPhone` constructor. |
+| **3** | `@override` above `void restart()` in `SmartPhone` | `Phone` does not have a `restart()` method, so `@override` has nothing to override. | Add `void restart()` to `Phone` so `SmartPhone` can override it. |
+| **4** | `p.battery = 100;` | `battery` only has a getter, not a setter, so assigning `100` fails. | Add `set battery(int value)` that accepts only values from `0` to `100`. |
+| **5** | `print(p.battery());` | `battery` is a getter (property), not a method, so calling it with `()` is invalid. | Change it to `print(p.battery);`. |
+| **Not a bug** | `Phone p = new Phone('Tecno', 50);` | Even though `new` is optional in modern Dart, using `new` to call the constructor is completely valid Dart syntax. | (none) |
+
+
