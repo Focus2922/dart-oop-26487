@@ -30,6 +30,23 @@ Having no setter for `_balance` prevents external code from changing the balance
 - `237 * 17 / 100` gives `40.29` (floating-point division with decimals)[cite: 5].
 - `237 * 17 ~/ 100` gives `40` (integer division without the `.29` remainder)[cite: 5].
 
+
+## Part 3
+
+Error: name too short
+Owner: Tuyishimire Jean Claude | Balance: 1870 RWF
+Owner: Tuyishimire Jean Claude | Balance: 1870 RWF
+Error: top-up must be 500 to 50000 RWF
+Topped up 2000 RWF
+Paid 287 RWF
+Paid 287 RWF
+Owner: Tuyishimire Jean Claude | Balance: 3296 RWF
+Student discount: 48 RWF
+Paid 239 RWF
+Owner: Tuyishimire Jean Claude | Balance: 1631 RWF
+Student card: 17% off
+
+
 ## Part 4: Bug table
 | Bug | The line | Why it is wrong (your words) | Your fix |
 | :--- | :--- | :--- | :--- |
